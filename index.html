@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reel Notes — Film Review Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow bg-glow--one"></div>
+    <div class="bg-glow bg-glow--two"></div>
+
+    <header class="hero">
+      <p class="eyebrow">Your Personal Film Journal</p>
+      <h1>Reel Notes</h1>
+      <p class="subtitle">
+        A modern home for your movie takes — quick reactions, deep dives, and everything in
+        between.
+      </p>
+    </header>
+
+    <main class="layout">
+      <section class="panel composer">
+        <h2>Add a new review</h2>
+        <form id="review-form" class="review-form">
+          <label>
+            Film title
+            <input type="text" id="title" name="title" required placeholder="e.g. Interstellar" />
+          </label>
+
+          <label>
+            Genre
+            <input type="text" id="genre" name="genre" required placeholder="Sci-fi / Drama" />
+          </label>
+
+          <label>
+            Rating
+            <input
+              type="number"
+              id="rating"
+              name="rating"
+              min="1"
+              max="10"
+              required
+              placeholder="1-10"
+            />
+          </label>
+
+          <label>
+            Review
+            <textarea
+              id="review"
+              name="review"
+              rows="5"
+              required
+              placeholder="What stood out? Direction? Performances? Score?"
+            ></textarea>
+          </label>
+
+          <button type="submit">Publish review</button>
+        </form>
+      </section>
+
+      <section class="panel feed">
+        <div class="feed-heading">
+          <h2>Latest posts</h2>
+          <p id="post-count">0 reviews</p>
+        </div>
+        <div id="reviews" class="reviews"></div>
+      </section>
+    </main>
+
+    <template id="review-template">
+      <article class="review-card">
+        <div class="review-top">
+          <h3 class="review-title"></h3>
+          <span class="review-rating"></span>
+        </div>
+        <p class="review-meta"></p>
+        <p class="review-body"></p>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
