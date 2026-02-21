@@ -1,0 +1,34 @@
+[
+  {
+    "id": "seed-drive-review",
+    "title": "Silence in the City: Why 'Drive' Still Feels Dangerous",
+    "film": "Drive",
+    "director": "Nicolas Winding Refn",
+    "rating": 8.9,
+    "watchDate": "2026-01-12",
+    "tags": [
+      "neo-noir",
+      "sound design",
+      "minimalism"
+    ],
+    "excerpt": "A restrained thriller where silence and synth score are as expressive as dialogue.",
+    "body": "Refn's direction turns stillness into tension. Gosling's performance is almost sculptural: fewer words, more intent.\n\nWhat makes this film last is how it trusts visual rhythm. Every frame is composed with control, then punctured by sudden violence. It's beautiful, yes, but never comfortable.",
+    "createdAt": "2026-01-13T09:12:00.000Z"
+  },
+  {
+    "id": "seed-martian-review",
+    "title": "The Brutal Optimism of 'The Martian'",
+    "film": "The Martian",
+    "director": "Ridley Scott",
+    "rating": 8.3,
+    "watchDate": "2026-02-02",
+    "tags": [
+      "sci-fi",
+      "humor",
+      "survival"
+    ],
+    "excerpt": "A survival narrative that earns emotion through procedure and problem-solving.",
+    "body": "It's easy to call this movie crowd-pleasing, but the craftsmanship is precise. Every technical obstacle is a mini-screenwriting challenge, and the movie consistently chooses clarity over fake complexity.\n\nThe emotional core works because the film respects competence. Watching people do difficult things well is thrilling when the stakes are clean and human.",
+    "createdAt": "2026-02-03T20:15:00.000Z"
+  }
+]

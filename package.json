@@ -1,0 +1,9 @@
+{
+  "name": "for-fun",
+  "version": "1.0.0",
+  "description": "Reel Notes split into client/server with CRUD reviews",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  }
+}
