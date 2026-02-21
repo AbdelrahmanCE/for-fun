@@ -26,17 +26,16 @@
       <section class="hero">
         <p class="kicker">Independent Film Journal</p>
         <h1>Publish your real film criticism, not just one-liners.</h1>
-        <p>
-          Turn your notes into full reviews with ratings, watch dates, directors, tags, and long-form
-          analysis. Designed like a modern editorial site.
-        </p>
       </section>
 
       <section class="stats" id="stats"></section>
 
       <section class="grid">
         <article class="panel composer" id="composer">
-          <h2>New review</h2>
+          <div class="composer-head">
+            <h2 id="form-title">New review</h2>
+            <button id="cancel-edit" type="button" class="secondary hidden">Cancel edit</button>
+          </div>
           <form id="review-form" class="review-form">
             <label>Review title <input id="title" name="title" required /></label>
             <label>Film name <input id="film" name="film" required /></label>
@@ -54,7 +53,7 @@
             <label>Full review
               <textarea id="body" name="body" rows="8" required placeholder="Write your full article here..."></textarea>
             </label>
-            <button type="submit">Publish review</button>
+            <button id="submit-btn" type="submit">Publish review</button>
           </form>
         </article>
 
@@ -95,7 +94,11 @@
         <div class="card-tags tags"></div>
         <div class="card-footer">
           <span class="rating-pill"></span>
-          <button class="read-btn" type="button">Read review</button>
+          <div class="actions">
+            <button class="edit-btn secondary" type="button">Edit</button>
+            <button class="delete-btn danger" type="button">Delete</button>
+            <button class="read-btn" type="button">Read</button>
+          </div>
         </div>
       </article>
     </template>

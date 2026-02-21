@@ -337,3 +337,39 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+.composer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--text);
+}
+
+.danger {
+  background: rgba(255, 127, 149, 0.2);
+  color: #ffd9e0;
+  border: 1px solid rgba(255, 127, 149, 0.5);
+}
+
+.actions {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.actions button {
+  padding: 0.45rem 0.6rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.empty {
+  color: var(--muted);
+}
