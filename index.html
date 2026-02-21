@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reel Notes — Film Critic Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="topbar wrap">
+      <p class="brand">Reel Notes</p>
+      <nav>
+        <a href="#composer">Write</a>
+        <a href="#feed">Reviews</a>
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <section class="hero">
+        <p class="kicker">Independent Film Journal</p>
+        <h1>Publish your real film criticism, not just one-liners.</h1>
+        <p>
+          Turn your notes into full reviews with ratings, watch dates, directors, tags, and long-form
+          analysis. Designed like a modern editorial site.
+        </p>
+      </section>
+
+      <section class="stats" id="stats"></section>
+
+      <section class="grid">
+        <article class="panel composer" id="composer">
+          <h2>New review</h2>
+          <form id="review-form" class="review-form">
+            <label>Review title <input id="title" name="title" required /></label>
+            <label>Film name <input id="film" name="film" required /></label>
+            <label>Director <input id="director" name="director" required /></label>
+            <div class="two-col">
+              <label>Rating (1-10) <input id="rating" name="rating" type="number" min="1" max="10" step="0.1" required /></label>
+              <label>Watched on <input id="watchDate" name="watchDate" type="date" required /></label>
+            </div>
+            <label>Tags (comma-separated)
+              <input id="tags" name="tags" placeholder="neo-noir, cinematography, character study" />
+            </label>
+            <label>Excerpt
+              <textarea id="excerpt" name="excerpt" rows="2" maxlength="180" required></textarea>
+            </label>
+            <label>Full review
+              <textarea id="body" name="body" rows="8" required placeholder="Write your full article here..."></textarea>
+            </label>
+            <button type="submit">Publish review</button>
+          </form>
+        </article>
+
+        <section class="panel feed" id="feed">
+          <div class="feed-head">
+            <h2>Published reviews</h2>
+            <div class="filters">
+              <input id="search" placeholder="Search title, film, director..." />
+              <select id="sort">
+                <option value="latest">Latest</option>
+                <option value="rating">Highest rated</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="featured"></div>
+          <div id="reviews" class="reviews"></div>
+        </section>
+      </section>
+    </main>
+
+    <dialog id="review-modal" class="review-modal">
+      <article>
+        <button id="close-modal" class="close-btn" aria-label="Close">×</button>
+        <p id="modal-meta" class="modal-meta"></p>
+        <h3 id="modal-title"></h3>
+        <p id="modal-excerpt" class="modal-excerpt"></p>
+        <div id="modal-tags" class="tags"></div>
+        <div id="modal-body" class="modal-body"></div>
+      </article>
+    </dialog>
+
+    <template id="card-template">
+      <article class="card">
+        <p class="card-meta"></p>
+        <h3 class="card-title"></h3>
+        <p class="card-excerpt"></p>
+        <div class="card-tags tags"></div>
+        <div class="card-footer">
+          <span class="rating-pill"></span>
+          <button class="read-btn" type="button">Read review</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
